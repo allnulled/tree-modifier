@@ -1,0 +1,14 @@
+[
+    {
+        "file": "src/tree-modifier.js",
+        "docs": [
+            {
+                "description": "The function creates a JS data-parser, which is a function that will accept any type of  data, and it will output the same, but modified as specified in the rules (the optionsParam.switcher and  optionsParam.modifier represent this rules). By default, the generated parser has 3 basic rules, which are automatically appended to the parser: 1. ARRAY:  - switcher: filters all the arrays. - modifier: iterates its items, and returns  them modified. The result is the same array,  but modified. 2. OBJECT:  - switcher: filters all the objects (except the  arrays, which are filtered by the previous one). - modifier: iterates its items, and returns  them modified. The result is the same object,  but modified. 3. ANY:  - switcher: filters any type of data. - modifier: returns the same data.",
+                "name": "TreeModifier.generate",
+                "type": "{Function}",
+                "param": "optionsParam {Object} Accepts properties: - switcher {Array<String:label,Function:filter}: List of pairs name-filter that associates a  type of modifier and the function that  filters the valid items for this grammar. - modifier: {Object<Function:modifier>} Map that associates a grammar with a modifier, which is a function that outputs a new value.",
+                "returns": "{Object} Object with a property \"modify\", which corresponds to the generated tree-modifier function, that accepts any type of data, and outputs the same, but modified as we have specified previously."
+            }
+        ]
+    }
+]

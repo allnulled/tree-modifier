@@ -1,0 +1,32 @@
+{
+  "name": "tree-modifier",
+  "version": "1.0.0",
+  "description": "Small tool to modify data with maximum clarity and minimum effort.",
+  "main": "src/tree-modifier.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "docs": "node node_modules/.bin/javadoc2json -i 'src/**/*.js' -o docs/docs.json",
+    "test": "node test/tree-modifier-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allnulled/tree-modifier.git"
+  },
+  "keywords": [
+    "tree",
+    "data",
+    "parser"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allnulled/tree-modifier/issues"
+  },
+  "homepage": "https://github.com/allnulled/tree-modifier#readme",
+  "devDependencies": {
+    "javadoc2json": "^1.0.6"
+  }
+}
