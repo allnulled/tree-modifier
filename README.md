@@ -70,14 +70,14 @@ As the precedence of these rules can change the result, and the objects in JavaS
 #### General usage: 
 
 ```js
-require("tree-modifier")
-   .generate(Object:options)
-   .modify(Any:data)
+require("tree-modifier") // returns: {TreeModifierGenerator}
+   .generate(Object:options) // returns: {TreeModifier}
+   .modify(Any:data) // returns: {Any type of data}
 ```
 
 ----
 
-#### Method: `{TreeModifier}.generate(Object:options)`
+#### Method: `{TreeModifierGenerator}.generate(Object:options)`
 
 **Parameter:** `Object:options`. Rules for the tree-modifier. Accepts 2 properties:
 
@@ -87,11 +87,11 @@ require("tree-modifier")
 
 *Note:* Every modifier is called using the same scope. That scope lets you modify values (while one is defining the modification of another value), through `this.modify(Any:data)`.
 
-**Returns:** `{Object:GeneratedTreeModifier:modifier}` Object that has the method `modify(Any:data)`.
+**Returns:** `{Object:TreeModifier:modifier}` Object that has the method `modify(Any:data)`.
 
 ----
 
-#### Method: `{GeneratedTreeModifier}.modify(Any:input)`
+#### Method: `{TreeModifier}.modify(Any:input)`
 
 **Parameter:** `Any:input` Any type of data is a valid input.
 
