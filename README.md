@@ -23,6 +23,7 @@ The tool only needs to know:
 2. Transform the data we want.
 
 ### All-in-1 example:
+
 ```js
 var result = require("tree-modifier").generate({
 	switcher: [
@@ -74,9 +75,7 @@ require("tree-modifier")
    .modify(Any:data)
 ```
 
-#### Method: 
-
-`{TreeModifier}.generate(Object:options)`
+#### Method: `{TreeModifier}.generate(Object:options)`
 
 **Parameter:** `Object:options`. Rules for the tree-modifier. Accepts 2 properties:
 
@@ -88,9 +87,7 @@ require("tree-modifier")
 
 **Returns:** `{Object:GeneratedTreeModifier:modifier}` Object that has the method `modify(Any:data)`.
 
-#### Method:
-
-`{GeneratedTreeModifier}.modify(Any:input)`
+#### Method: `{GeneratedTreeModifier}.modify(Any:input)`
 
 **Parameter:** `Any:input` Any type of data is a valid input.
 
@@ -99,4 +96,4 @@ require("tree-modifier")
 
 # 5. Conclusion
 
-It is a very specific utility, but it can be very helpful when we need to change some piece of data recursively, and we have some complexity in our source code, because it lets you do a powerful match-replace through any type of data, in a very minimalistic expression of code.# Read this file
+It is a very specific utility, but it can be very helpful when we need to change some piece of data recursively, and we have some complexity in our source code, because it lets you do a powerful match-replace through any type of data, in a very minimalistic expression of code.# Read this filele
