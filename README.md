@@ -8,6 +8,8 @@ The `tree-modifier` is a small JavaScript tool to modify any piece of data recur
 
 # 2. Usage
 
+### General:
+
 The tool only needs to know:
 
    1. *What to modify.*
@@ -20,25 +22,20 @@ The tool only needs to know:
 
 2. Transform the data we want.
 
-### All-in-1 demo:
+### All-in-1 example:
 ```js
 var result = require("tree-modifier").generate({
 	switcher: [
-		[
-			"STRINGS", function(item) {
-				return typeof item === "string";
-			}
-		]
+		["STRINGS", function(item) {return typeof item === "string"}]
+		["NUMBERS", function(item) {return typeof item === "number"}]
 	],
 	modifier: {
-		STRINGS: function(item) {
-			return "Hello world!";
-		}
+		STRINGS: function(item) {return "Hello world!"},
+		NUMBERS: function(item) {return 255}
 	}
 }).modify({
 	first: "Text 1"
-	second: "Text 2"
-	third: "Text 3"
+	second: 1000
 });
 ```
 
@@ -47,8 +44,7 @@ The output is stored in `result` variable. It will be something like:
 ```js
 {
   first: "Hello world!",
-  second: "Hello world!",
-  third: "Hello world!"
+  second: 255
 }
 ```
 
@@ -56,15 +52,9 @@ The output is stored in `result` variable. It will be something like:
 
 It is very simple. 
 
-We define some rules to `match` (switchers) and to `replace` (modifiers).
+First we define some rules to `match` (switchers) and to `replace` (modifiers). Then we pass any type of data. Finally, we obtain the data, but modified as we wanted.
 
-Then, we pass any type of data.
-
-And we obtain the data, but modified as we wanted.
-
-There are 3 initial rules applied, and everything that we write, will have priority over them.
-
-By default, the 3 rules are, in this order:
+There are 3 initial rules applied, and everything that we write, will have priority over them. By default, the 3 rules are, in this order:
 
 - `ARRAY`: takes any `instance of Array`, iterates through its items, and modifies them one by one (despite we do not know the other rules being applied).
 
