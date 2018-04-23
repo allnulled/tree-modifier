@@ -66,9 +66,13 @@ As the precedence of these rules can change the result, and the objects in JavaS
 
 # 4. API
 
-#### Usage: 
+#### General usage: 
 
-`require("tree-modifier").generate(Object:options).modify(Any:data)`
+```js
+require("tree-modifier")
+   .generate(Object:options)
+   .modify(Any:data)
+```
 
 #### Method: 
 
