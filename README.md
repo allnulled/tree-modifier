@@ -75,6 +75,8 @@ require("tree-modifier")
    .modify(Any:data)
 ```
 
+----
+
 #### Method: `{TreeModifier}.generate(Object:options)`
 
 **Parameter:** `Object:options`. Rules for the tree-modifier. Accepts 2 properties:
@@ -87,12 +89,15 @@ require("tree-modifier")
 
 **Returns:** `{Object:GeneratedTreeModifier:modifier}` Object that has the method `modify(Any:data)`.
 
+----
+
 #### Method: `{GeneratedTreeModifier}.modify(Any:input)`
 
 **Parameter:** `Any:input` Any type of data is a valid input.
 
 **Returns:** `{Any:output}` It will return the data, but modified as we have specified in the previous rules.
  
+----
 
 # 5. Conclusion
 
